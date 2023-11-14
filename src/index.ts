@@ -7,11 +7,7 @@ const fromTreeView = Annotation.define()
 const transactionIsFromTreeView = (tr: Transaction) => tr.annotation(fromTreeView)
 
 const treeViewPane = ViewPlugin.define((view) => {
-  const scroller = document.querySelector<HTMLDivElement>('.cm-scroller')
-
-  if (!scroller) {
-    return {}
-  }
+  const scroller = view.scrollDOM
 
   const container = document.createElement('div')
   container.classList.add('cm-tree-view-container')
@@ -178,9 +174,10 @@ const treeViewTheme = EditorView.baseTheme({
     flexShrink: '0',
     fontFamily: 'ui-monospace, monospace',
     height: 'calc(100% - 32px)',
+    minHeight: '200px',
     overflow: 'auto',
     position: 'absolute',
-    top: '32px',
+    top: 0,
     right: 0,
     width: '50%',
   },

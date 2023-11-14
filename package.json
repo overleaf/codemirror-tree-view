@@ -1,6 +1,6 @@
 {
   "name": "@overleaf/codemirror-tree-view",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "CodeMirror extension providing an interactive view of a document's syntax tree",
   "type": "module",
   "repository": "github:overleaf/codemirror-tree-view",
